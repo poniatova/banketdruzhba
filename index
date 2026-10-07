@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Банкетный зал «Дружба» — Челябинск, Курчатова 28Б</title>
+<meta name="description" content="Банкетный зал «Дружба» на Курчатова, 28Б: дни рождения, юбилеи, корпоративы и свадьбы. Два зала, бесплатная аренда, свой алкоголь без ограничений.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,400;0,600;0,700;0,800;0,900;1,600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#FBF7F0;
+    --cream-deep:#F3ECDE;
+    --coral:#E86F56;
+    --coral-deep:#D45B43;
+    --coral-pale:#F7DFD3;
+    --coral-mid:#F0A98C;
+    --wine:#8A183D;
+    --yellow:#F6DC58;
+    --ink:#2B2320;
+    --ink-soft:#6B5F56;
+    --white:#FFFFFF;
+    --radius-lg:28px;
+    --radius-md:18px;
+    --radius-sm:12px;
+    --shadow:0 18px 40px -22px rgba(138,24,61,.28);
+    --maxw:1180px;
+    --pat-confetti: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cg fill-opacity='0.5'%3E%3Crect x='24' y='34' width='11' height='4.5' rx='2' fill='%238A183D' transform='rotate(24 29 36)'/%3E%3Ccircle cx='150' cy='46' r='3' fill='%23E86F56'/%3E%3Crect x='182' y='128' width='11' height='4.5' rx='2' fill='%23F6DC58' transform='rotate(-18 187 130)'/%3E%3Ccircle cx='64' cy='158' r='2.5' fill='%238A183D'/%3E%3Crect x='108' y='182' width='10' height='4' rx='2' fill='%23E86F56' transform='rotate(42 112 184)'/%3E%3Ccircle cx='28' cy='108' r='2' fill='%23F6DC58'/%3E%3Crect x='150' y='10' width='10' height='4' rx='2' fill='%238A183D' transform='rotate(-32 155 12)'/%3E%3Ccircle cx='200' cy='190' r='2.5' fill='%23E86F56'/%3E%3C/g%3E%3C/svg%3E");
+    --pat-confetti-dark: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cg fill-opacity='0.16'%3E%3Crect x='24' y='34' width='11' height='4.5' rx='2' fill='%23ffffff' transform='rotate(24 29 36)'/%3E%3Ccircle cx='150' cy='46' r='3' fill='%23F6DC58'/%3E%3Crect x='182' y='128' width='11' height='4.5' rx='2' fill='%23ffffff' transform='rotate(-18 187 130)'/%3E%3Ccircle cx='64' cy='158' r='2.5' fill='%23ffffff'/%3E%3Crect x='108' y='182' width='10' height='4' rx='2' fill='%23F6DC58' transform='rotate(42 112 184)'/%3E%3Ccircle cx='28' cy='108' r='2' fill='%23ffffff'/%3E%3Crect x='150' y='10' width='10' height='4' rx='2' fill='%23ffffff' transform='rotate(-32 155 12)'/%3E%3Ccircle cx='200' cy='190' r='2.5' fill='%23F6DC58'/%3E%3C/g%3E%3C/svg%3E");
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:'Nunito Sans',sans-serif;
+    background:var(--cream);
+    color:var(--ink);
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  img{max-width:100%;display:block;}
+  a{color:inherit;text-decoration:none;}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px;}
+  h1,h2,h3{font-weight:800;letter-spacing:-0.01em;color:var(--wine);}
+  .section{padding:84px 0;}
+  .section-head{max-width:620px;margin-bottom:44px;}
+  .section-head.center{margin-left:auto;margin-right:auto;text-align:center;}
+  .section-head h2{font-size:clamp(26px,3.6vw,38px);margin-bottom:12px;}
+  .section-head p{color:var(--ink-soft);font-size:16px;}
+  .pill{
+    display:inline-flex;align-items:center;gap:8px;
+    background:var(--white);border:1px solid rgba(138,24,61,.12);
+    padding:9px 16px;border-radius:999px;font-size:14px;font-weight:700;color:var(--wine);
+  }
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:8px;
+    padding:15px 28px;border-radius:999px;font-weight:800;font-size:15.5px;
+    border:2px solid transparent;cursor:pointer;transition:transform .15s ease, box-shadow .15s ease;
+  }
+  .btn:hover{transform:translateY(-1px);}
+  .btn-primary{background:var(--coral);color:var(--white);box-shadow:0 14px 28px -12px rgba(232,111,86,.65);}
+  .btn-primary:hover{background:var(--coral-deep);}
+  .btn-ghost{background:transparent;border-color:rgba(138,24,61,.35);color:var(--wine);}
+  .btn-ghost:hover{border-color:var(--wine);background:rgba(138,24,61,.05);}
+  .btn-ghost.on-photo{border-color:rgba(255,255,255,.75);color:#fff;}
+  .btn-ghost.on-photo:hover{background:rgba(255,255,255,.14);border-color:#fff;}
+
+  /* HEADER */
+  header{
+    position:sticky;top:0;z-index:50;
+    background:rgba(251,247,240,.88);backdrop-filter:blur(10px);
+    border-bottom:1px solid rgba(138,24,61,.08);
+  }
+  .header-inner{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:16px 0;}
+  .brand{display:flex;align-items:center;gap:10px;}
+  .brand img{width:34px;height:34px;}
+  .brand .word{font-weight:900;font-size:19px;color:var(--wine);letter-spacing:-0.01em;}
+  .brand .word small{display:block;font-weight:700;font-size:10.5px;letter-spacing:.06em;color:var(--coral-deep);text-transform:none;}
+  nav{display:flex;gap:30px;}
+  nav a{font-size:14.5px;font-weight:700;color:var(--ink-soft);}
+  nav a:hover{color:var(--wine);}
+  .header-right{display:flex;align-items:center;gap:20px;}
+  .header-contact{text-align:right;font-size:13.5px;line-height:1.4;}
+  .header-contact .phone{font-weight:800;color:var(--wine);font-size:15px;}
+  .header-contact .addr{color:var(--ink-soft);}
+  @media (max-width:980px){
+    nav{display:none;}
+    .header-contact{display:none;}
+  }
+
+  /* HERO */
+  .hero{background:var(--cream);overflow:hidden;}
+  .hero-inner{
+    display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;
+    padding:76px 0;
+  }
+  .hero-content{position:relative;z-index:2;}
+  .hero-content h1{
+    font-size:clamp(32px,4.4vw,48px);line-height:1.12;max-width:13ch;margin:20px 0 18px;
+  }
+  .hero-content .lead{font-size:17px;max-width:42ch;color:var(--ink-soft);margin-bottom:28px;}
+  .hero-price{
+    display:inline-flex;align-items:baseline;gap:8px;margin-bottom:22px;
+    background:var(--coral-pale);border-radius:var(--radius-md);padding:12px 20px;color:var(--wine);
+  }
+  .hero-price b{font-size:30px;font-weight:900;color:var(--coral-deep);line-height:1;}
+  .hero-price-from,.hero-price-per{font-size:15px;font-weight:700;}
+  .hero-chips{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:32px;}
+  .hero-chips span{
+    background:var(--white);border:1px solid var(--cream-deep);color:var(--wine);
+    padding:8px 15px;border-radius:999px;font-size:13.5px;font-weight:700;
+  }
+  .hero-ctas{display:flex;gap:14px;flex-wrap:wrap;}
+
+  .hero-photos{
+    display:grid;grid-template-columns:1.25fr 1fr;grid-template-rows:repeat(3,1fr);
+    gap:14px;height:540px;
+  }
+  .hero-photo{border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow);}
+  .hero-photo img{width:100%;height:100%;object-fit:cover;}
+  .hero-photo.big{grid-column:1;grid-row:1/4;}
+  .hero-photo.p2{grid-column:2;grid-row:1;}
+  .hero-photo.p3{grid-column:2;grid-row:2;}
+  .hero-photo.p4{grid-column:2;grid-row:3;}
+
+  @media (max-width:980px){
+    .hero-inner{grid-template-columns:1fr;gap:34px;padding:52px 0 44px;}
+    .hero-photos{
+      height:auto;grid-template-columns:1fr 1fr;grid-template-rows:repeat(3,130px);
+    }
+    .hero-photo.big{grid-column:1/3;grid-row:1;}
+    .hero-photo.p2{grid-column:1;grid-row:2;}
+    .hero-photo.p3{grid-column:2;grid-row:2;}
+    .hero-photo.p4{grid-column:1/3;grid-row:3;}
+  }
+
+  /* STATS STRIP */
+  .stats{
+    background-color:var(--coral-pale);
+  }
+  .stats .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;padding:44px 28px;}
+  .stat{text-align:center;}
+  .stat b{display:block;font-size:clamp(34px,4.6vw,46px);font-weight:900;color:var(--wine);line-height:1;}
+  .stat span{display:block;margin-top:8px;font-size:13.5px;color:rgba(138,24,61,.7);font-weight:700;}
+  @media (max-width:760px){ .stats .wrap{grid-template-columns:repeat(2,1fr);} }
+
+  /* OCCASIONS */
+  #occasions{
+    background-color:var(--cream);
+    background-image:var(--pat-confetti);
+    background-size:220px 220px;
+  }
+  .occasions-grid{display:flex;flex-wrap:wrap;gap:12px;}
+  .occasion-chip{
+    background:var(--white);border:1.5px solid var(--cream-deep);
+    padding:13px 22px;border-radius:999px;font-weight:700;font-size:15px;color:var(--ink);
+  }
+  .occasion-note{margin-top:22px;font-size:14.5px;color:var(--ink-soft);}
+
+  /* HALLS */
+  .halls{background:var(--white);}
+  .hall-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;}
+  .hall-card{
+    background:var(--cream);border-radius:var(--radius-lg);padding:32px;
+    border:1px solid var(--cream-deep);
+  }
+  .hall-card .cap{
+    display:inline-block;background:var(--yellow);color:#5a4a0f;font-weight:800;font-size:13px;
+    padding:6px 14px;border-radius:999px;margin-bottom:16px;
+  }
+  .hall-card h3{font-size:22px;margin-bottom:10px;}
+  .hall-card p{color:var(--ink-soft);font-size:15px;}
+  @media (max-width:760px){ .hall-grid{grid-template-columns:1fr;} }
+
+  .flex-note{
+    margin-top:24px;display:flex;gap:16px;flex-wrap:wrap;background:var(--cream);
+    border-radius:var(--radius-md);padding:20px 24px;
+  }
+  .flex-note div{flex:1;min-width:220px;font-size:14.5px;color:var(--ink-soft);}
+  .flex-note strong{color:var(--wine);display:block;margin-bottom:4px;font-size:15px;}
+
+  /* MENU */
+  .menu{background:var(--cream-deep);}
+  .menu-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+  .menu-card{
+    background:var(--white);border-radius:var(--radius-lg);padding:30px 26px;
+    display:flex;flex-direction:column;box-shadow:var(--shadow);
+  }
+  .menu-card.featured{background:var(--wine);color:#fff;}
+  .menu-card .tier{font-size:14px;font-weight:800;color:var(--coral-deep);margin-bottom:6px;}
+  .menu-card.featured .tier{color:var(--yellow);}
+  .menu-card h3{font-size:21px;margin-bottom:4px;}
+  .menu-card.featured h3{color:#fff;}
+  .menu-card .price{font-size:32px;font-weight:900;color:var(--coral);margin-bottom:18px;}
+  .menu-card.featured .price{color:#fff;}
+  .menu-card ul{list-style:none;flex:1;margin-bottom:22px;}
+  .menu-card li{
+    padding:9px 0;border-top:1px solid rgba(138,24,61,.08);font-size:14.5px;color:var(--ink-soft);
+  }
+  .menu-card.featured li{border-top-color:rgba(255,255,255,.18);color:rgba(255,255,255,.88);}
+  .menu-card li:first-child{border-top:none;}
+  .menu-card .btn{width:100%;}
+  .menu-note{margin-top:28px;font-size:14px;color:var(--ink-soft);}
+  @media (max-width:860px){ .menu-grid{grid-template-columns:1fr;} }
+
+  /* CALCULATOR */
+  .calc-box{
+    margin-top:40px;background:var(--white);border-radius:var(--radius-lg);
+    padding:30px 32px;box-shadow:var(--shadow);
+    display:grid;grid-template-columns:1fr 1.6fr auto;gap:28px;align-items:end;
+  }
+  .calc-info{align-self:center;}
+  .calc-info h3{font-size:20px;color:var(--wine);margin-bottom:6px;}
+  .calc-info p{font-size:14px;color:var(--ink-soft);}
+  .calc-controls{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+  .calc-controls .field,.calc-result{margin-bottom:0;min-width:0;}
+  .calc-box select,.calc-box input{
+    height:56px;width:100%;padding:0 16px;font-size:15px;line-height:1.2;
+    -webkit-appearance:none;appearance:none;
+  }
+  .calc-box .field select{
+    padding-right:40px;cursor:pointer;
+    background-color:var(--cream);
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' fill='none' stroke='%238A183D' stroke-width='2'%3E%3Cpath d='M1 1l5 5 5-5'/%3E%3C/svg%3E");
+    background-repeat:no-repeat;background-position:right 16px center;
+  }
+  .calc-box input[type=number]{-moz-appearance:textfield;}
+  .calc-box input[type=number]::-webkit-outer-spin-button,
+  .calc-box input[type=number]::-webkit-inner-spin-button{-webkit-appearance:none;margin:0;}
+  .calc-result{min-width:200px;}
+  .calc-result-label{display:block;font-size:13px;font-weight:700;color:var(--ink-soft);margin-bottom:6px;}
+  .calc-result-sum{
+    display:flex;align-items:center;justify-content:center;height:56px;
+    background:var(--coral-pale);border-radius:var(--radius-sm);
+    font-size:24px;font-weight:900;color:var(--wine);white-space:nowrap;
+  }
+  @media (max-width:980px){
+    .calc-box{grid-template-columns:1fr;text-align:center;}
+    .calc-controls{grid-template-columns:1fr 1fr;}
+  }
+  @media (max-width:560px){ .calc-controls{grid-template-columns:1fr;} }
+
+  /* ADVANTAGES */
+  .adv-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+  .adv-card{padding:4px 4px 4px 0;}
+  .adv-ic{
+    width:48px;height:48px;border-radius:14px;background:var(--coral-pale);
+    display:flex;align-items:center;justify-content:center;margin-bottom:14px;font-size:22px;
+  }
+  .adv-card h4{font-size:16.5px;margin-bottom:6px;color:var(--ink);font-weight:800;}
+  .adv-card p{font-size:14px;color:var(--ink-soft);}
+  @media (max-width:760px){ .adv-grid{grid-template-columns:1fr 1fr;} }
+  @media (max-width:480px){ .adv-grid{grid-template-columns:1fr;} }
+
+  /* ADDONS */
+  .addons{background:var(--white);}
+  .addons-row{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:18px;}
+  .addon-chip{
+    display:flex;align-items:center;gap:10px;background:var(--cream);
+    padding:14px 20px;border-radius:var(--radius-md);font-weight:700;font-size:15px;
+  }
+  .addon-chip .dot{width:9px;height:9px;border-radius:50%;background:var(--coral);}
+
+  /* GALLERY */
+  .gal-tabs{display:flex;gap:10px;margin-bottom:22px;flex-wrap:wrap;}
+  .gal-tab{
+    padding:11px 22px;border-radius:999px;font-weight:800;font-size:14.5px;
+    background:var(--white);border:1.5px solid var(--cream-deep);color:var(--ink-soft);cursor:pointer;
+    transition:background .15s ease,color .15s ease,border-color .15s ease;
+  }
+  .gal-tab.active{background:var(--wine);border-color:var(--wine);color:#fff;}
+  .gal-slider{position:relative;}
+  .gal-slides{position:relative;aspect-ratio:16/8;border-radius:var(--radius-lg);overflow:hidden;}
+  @media (max-width:760px){ .gal-slides{aspect-ratio:4/3.4;} }
+  .gal-slide{
+    position:absolute;inset:0;opacity:0;visibility:hidden;transition:opacity .35s ease;
+  }
+  .gal-slide.active{opacity:1;visibility:visible;}
+  .ph-tile{
+    position:absolute;inset:0;border-radius:var(--radius-lg);
+    background:linear-gradient(155deg,var(--coral-pale) 0%, var(--cream-deep) 100%);
+    display:flex;align-items:center;justify-content:center;
+    color:var(--coral-deep);border:1.5px dashed rgba(212,91,67,.4);
+  }
+  .ph-tile svg{width:34px;height:34px;opacity:.5;}
+  .gal-cap{
+    position:absolute;left:20px;bottom:20px;z-index:2;
+    background:rgba(43,35,32,.72);color:#fff;font-size:13.5px;font-weight:700;
+    padding:9px 16px;border-radius:999px;backdrop-filter:blur(3px);
+  }
+  .gal-arrow{
+    position:absolute;top:50%;transform:translateY(-50%);z-index:3;
+    width:44px;height:44px;border-radius:50%;background:rgba(255,255,255,.9);
+    border:none;display:flex;align-items:center;justify-content:center;cursor:pointer;
+    color:var(--wine);box-shadow:0 10px 22px -8px rgba(43,35,32,.35);
+  }
+  .gal-arrow svg{width:20px;height:20px;}
+  .gal-arrow.prev{left:16px;}
+  .gal-arrow.next{right:16px;}
+  .gal-arrow:hover{background:#fff;}
+  .gal-dots{display:flex;justify-content:center;gap:8px;margin-top:18px;}
+  .gal-dot{width:9px;height:9px;border-radius:50%;background:var(--cream-deep);border:none;cursor:pointer;padding:0;}
+  .gal-dot.active{background:var(--wine);}
+
+  /* BOOKING */
+  .booking{
+    background-color:var(--wine);color:#fff;
+    background-image:var(--pat-confetti-dark);
+    background-size:220px 220px;
+  }
+  .booking .wrap{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start;}
+  .booking h2{color:#fff;}
+  .booking .section-head p{color:rgba(255,255,255,.75);}
+  .booking-info{font-size:15px;}
+  .booking-info .row{display:flex;gap:14px;padding:16px 0;border-top:1px solid rgba(255,255,255,.14);}
+  .booking-info .row:first-child{border-top:none;}
+  .booking-info .label{width:120px;flex-shrink:0;color:rgba(255,255,255,.6);font-size:13.5px;font-weight:700;}
+  .booking-info .val{font-weight:700;}
+  .booking-info .note{margin-top:22px;font-size:13.5px;color:rgba(255,255,255,.65);}
+
+  form{background:#fff;border-radius:var(--radius-lg);padding:30px;color:var(--ink);}
+  .field{margin-bottom:16px;}
+  .field label{display:block;font-size:13px;font-weight:700;color:var(--ink-soft);margin-bottom:6px;}
+  .field input,.field select,.field textarea{
+    width:100%;padding:13px 14px;border-radius:var(--radius-sm);border:1.5px solid var(--cream-deep);
+    font-family:inherit;font-size:14.5px;background:var(--cream);color:var(--ink);
+  }
+  .field input:focus,.field select:focus,.field textarea:focus{outline:2px solid var(--coral);outline-offset:1px;}
+  .field-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+  .consent{display:flex;gap:10px;align-items:flex-start;font-size:12.5px;color:var(--ink-soft);margin:18px 0;}
+  .consent input{width:16px;height:16px;margin-top:2px;flex-shrink:0;}
+  .consent a{color:var(--wine);text-decoration:underline;}
+  form .btn{width:100%;}
+  @media (max-width:860px){ .booking .wrap{grid-template-columns:1fr;} .field-row{grid-template-columns:1fr;} }
+
+  /* FOOTER */
+  footer{background:#2B2320;color:rgba(255,255,255,.65);padding:48px 0 28px;font-size:13.5px;}
+  footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:24px;}
+  footer .brand .word{color:#fff;}
+  footer .brand .word small{color:var(--coral-mid);}
+  footer .foot-links{display:flex;gap:22px;flex-wrap:wrap;}
+  footer .foot-links a:hover{color:#fff;}
+  .foot-bottom{
+    margin-top:32px;padding-top:20px;border-top:1px solid rgba(255,255,255,.1);
+    display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:12.5px;
+  }
+
+  /* FLOATING CALL (mobile) */
+  .fab-call{
+    display:none;position:fixed;right:18px;bottom:18px;z-index:60;
+    width:56px;height:56px;border-radius:50%;background:var(--coral);
+    align-items:center;justify-content:center;box-shadow:0 14px 28px -10px rgba(232,111,86,.7);
+  }
+  .fab-call svg{width:24px;height:24px;fill:#fff;}
+  @media (max-width:980px){ .fab-call{display:flex;} }
+
+  @media (prefers-reduced-motion:reduce){ *{scroll-behavior:auto!important;transition:none!important;} }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap header-inner">
+    <a href="#" class="brand">
+      <img src="logo-icon.png" alt="Дружба">
+      <span class="word">Дружба<small>банкетный зал</small></span>
+    </a>
+    <nav>
+      <a href="#halls">Залы</a>
+      <a href="#menu">Меню</a>
+      <a href="#gallery">Галерея</a>
+      <a href="#booking">Контакты</a>
+    </nav>
+    <div class="header-right">
+      <div class="header-contact">
+        <div class="phone"><!-- TODO: отдельный номер под банкетное направление --> +7 (900) 000-00-00</div>
+        <div class="addr">Курчатова, 28Б</div>
+      </div>
+      <a href="#booking" class="btn btn-primary">Забронировать</a>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap hero-inner">
+    <div class="hero-content">
+      <h1>Банкетный зал в центре Челябинска</h1>
+      <p class="lead">Ваш праздник в красивом светлом пространстве по доступной цене.</p>
+      <div class="hero-price"><span class="hero-price-from">меню от</span> <b>1 900 ₽</b> <span class="hero-price-per">на гостя</span></div>
+      <div class="hero-chips">
+        <span>от 10 до 60 гостей</span>
+        <span>аренда зала — бесплатно</span>
+        <span>свой алкоголь без ограничений</span>
+      </div>
+      <div class="hero-ctas">
+        <a href="#booking" class="btn btn-primary">Забронировать дату</a>
+        <a href="#menu" class="btn btn-ghost">Смотреть меню</a>
+      </div>
+    </div>
+    <div class="hero-photos">
+      <div class="hero-photo big">
+        <img src="https://images.stockcake.com/public/c/b/e/cbe2dd0b-b8dc-4470-8737-fb8a9b876efa_large/joyful-birthday-toast-stockcake.jpg" alt="Друзья празднуют день рождения за накрытым столом">
+      </div>
+      <div class="hero-photo p2">
+        <img src="https://images.stockcake.com/public/2/5/b/25bcb559-32c6-4242-9522-3a093f32060a_large/grilled-skewer-delight-stockcake.jpg" alt="Мясные шашлыки на подаче">
+      </div>
+      <div class="hero-photo p3">
+        <img src="https://images.stockcake.com/public/6/e/d/6ed5fe6c-d43c-407b-823a-2606cce07449_large/delicious-caesar-salad-stockcake.jpg" alt="Салат цезарь с курицей">
+      </div>
+      <div class="hero-photo p4">
+        <img src="https://images.stockcake.com/public/3/2/3/323d92e2-0770-4463-8f99-a69b1e910e6e_large/delicious-sandwich-platter-stockcake.jpg" alt="Ассорти из закусок на подаче">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="stats">
+  <div class="wrap">
+    <div class="stat"><b>2</b><span>зала на выбор</span></div>
+    <div class="stat"><b>60</b><span>гостей максимум</span></div>
+    <div class="stat"><b>0 ₽</b><span>аренда зала</span></div>
+    <div class="stat"><b>центр</b><span>города, рядом парковка</span></div>
+  </div>
+</section>
+
+<section class="section" id="occasions">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Для любого повода</h2>
+      <p>Собираете близких или коллег — зал подстроится под сценарий.</p>
+    </div>
+    <div class="occasions-grid">
+      <span class="occasion-chip">Дни рождения</span>
+      <span class="occasion-chip">Юбилеи</span>
+      <span class="occasion-chip">Корпоративы</span>
+      <span class="occasion-chip">Свадьбы</span>
+      <span class="occasion-chip">Выпускные</span>
+      <span class="occasion-chip">Детские праздники</span>
+    </div>
+    <p class="occasion-note">Также проводим бизнес-завтраки, фуршеты и новогодние корпоративы — уточняйте даты по телефону.</p>
+  </div>
+</section>
+
+<section class="section halls" id="halls">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Два зала на выбор</h2>
+      <p>Можно арендовать один зал или оба сразу — для события покрупнее.</p>
+    </div>
+    <div class="hall-grid">
+      <div class="hall-card">
+        <span class="cap">до 20 человек</span>
+        <h3>ВИП-зал</h3>
+        <p>Уютная обстановка для семейного торжества или небольшого корпоратива — без посторонних гостей рядом.</p>
+      </div>
+      <div class="hall-card">
+        <span class="cap">до 60 человек</span>
+        <h3>Основной зал</h3>
+        <p>Просторный зал с большими окнами и естественным светом — подойдёт для свадьбы, юбилея или крупного корпоратива.</p>
+      </div>
+    </div>
+    <div class="flex-note">
+      <div><strong>Любая рассадка</strong>Круглые столы, фуршет или банкетная линия — соберём под ваш сценарий.</div>
+      <div><strong>Танцпол и техника</strong>Место под диджея или ведущего, экран для слайд-шоу — организуем по запросу.</div>
+      <div><strong>Без ограничений по шуму</strong>Отмечайте так, как хочется — до позднего вечера.</div>
+    </div>
+  </div>
+</section>
+
+<section class="section menu" id="menu">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Праздничное меню</h2>
+      <p>Три пакета на выбор — от уютного семейного стола до праздничного банкета.</p>
+    </div>
+    <div class="menu-grid">
+      <div class="menu-card">
+        <span class="tier">Эконом</span>
+        <h3>Для уютного застолья</h3>
+        <div class="price">1 900 ₽ <small style="font-size:14px;font-weight:700;color:var(--ink-soft);">/ чел.</small></div>
+        <ul>
+          <li>Салат оливье с ветчиной</li>
+          <li>Мясная тарелка</li>
+          <li>Разносолы</li>
+          <li>Курица под сырным соусом или мясо по-французски</li>
+          <li>Хлебная корзина, морс, чай</li>
+        </ul>
+        <a href="#booking" class="btn btn-ghost">Выбрать пакет</a>
+      </div>
+      <div class="menu-card featured">
+        <span class="tier">Стандарт</span>
+        <h3>Для праздничного стола</h3>
+        <div class="price">2 400 ₽ <small style="font-size:14px;font-weight:700;color:rgba(255,255,255,.75);">/ чел.</small></div>
+        <ul>
+          <li>Салат цезарь с курицей</li>
+          <li>Мясное ассорти</li>
+          <li>Рыбное ассорти</li>
+          <li>Сырное ассорти</li>
+          <li>Фаршированные блины с курицей и грибами</li>
+          <li>Горбуша под сыром или куриный шницель</li>
+          <li>Хлебная корзина, морс, чай</li>
+        </ul>
+        <a href="#booking" class="btn btn-primary">Выбрать пакет</a>
+      </div>
+      <div class="menu-card">
+        <span class="tier">Премиум</span>
+        <h3>Для особого торжества</h3>
+        <div class="price">2 900 ₽ <small style="font-size:14px;font-weight:700;color:var(--ink-soft);">/ чел.</small></div>
+        <ul>
+          <li>Салат с языком</li>
+          <li>Тарталетки с грибами</li>
+          <li>Мясное ассорти</li>
+          <li>Рыбное ассорти</li>
+          <li>Сырное ассорти</li>
+          <li>Мясной сет, корейка или стейк лосося</li>
+          <li>Праздничный пирог с ягодами</li>
+          <li>Хлебная корзина, морс, чай</li>
+        </ul>
+        <a href="#booking" class="btn btn-ghost">Выбрать пакет</a>
+      </div>
+    </div>
+    <p class="menu-note">Своё спиртное можно приносить без ограничений. Продление после 22:00 — 5 000 ₽/час. Минимальный заказ — от 10 гостей.</p>
+
+    <div class="calc-box">
+      <div class="calc-info">
+        <h3>Рассчитайте стоимость</h3>
+        <p>Выберите пакет и количество гостей — покажем примерную сумму банкета.</p>
+      </div>
+      <div class="calc-controls">
+        <div class="field">
+          <label for="calc-tier">Пакет</label>
+          <select id="calc-tier">
+            <option value="1900">Эконом — 1 900 ₽/чел.</option>
+            <option value="2400" selected>Стандарт — 2 400 ₽/чел.</option>
+            <option value="2900">Премиум — 2 900 ₽/чел.</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="calc-guests">Количество гостей</label>
+          <input id="calc-guests" type="number" min="10" value="20">
+        </div>
+      </div>
+      <div class="calc-result">
+        <span class="calc-result-label">Примерная стоимость</span>
+        <span class="calc-result-sum" id="calc-sum">48 000 ₽</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="advantages">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Почему здесь удобно</h2>
+    </div>
+    <div class="adv-grid">
+      <div class="adv-card">
+        <div class="adv-ic">☀️</div>
+        <h4>Большие окна</h4>
+        <p>Благодаря большим окнам зал выглядит просторным и торжественным в любое время дня. Много света для идеальных фотографий.</p>
+      </div>
+      <div class="adv-card">
+        <div class="adv-ic">📍</div>
+        <h4>В центре города</h4>
+        <p>Пересечение Курчатова и Воровского — добраться легко с любой стороны.</p>
+      </div>
+      <div class="adv-card">
+        <div class="adv-ic">🚗</div>
+        <h4>Удобная парковка</h4>
+        <p>Рядом со входом. Гостям не придётся кружить в поисках места.</p>
+      </div>
+      <div class="adv-card">
+        <div class="adv-ic">🍷</div>
+        <h4>Свой алкоголь</h4>
+        <p>Без пробкового сбора и ограничений — на ваш вкус.</p>
+      </div>
+      <div class="adv-card">
+        <div class="adv-ic">🔊</div>
+        <h4>Без ограничений по шуму</h4>
+        <p>Музыка и тосты — столько, сколько требует праздник.</p>
+      </div>
+      <div class="adv-card">
+        <div class="adv-ic">🏠</div>
+        <h4>Аренда — бесплатно</h4>
+        <p>Платите только за меню на гостей, без скрытых доплат за зал.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section addons">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Дополнительные услуги</h2>
+      <p>Поможем собрать праздник целиком — обсудим при бронировании.</p>
+    </div>
+    <div class="addons-row">
+      <span class="addon-chip"><span class="dot"></span>Праздничная программа</span>
+      <span class="addon-chip"><span class="dot"></span>Диджей</span>
+      <span class="addon-chip"><span class="dot"></span>Ведущий</span>
+      <span class="addon-chip"><span class="dot"></span>Декоратор</span>
+      <span class="addon-chip"><span class="dot"></span>Фотограф</span>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="gallery">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Посмотрите на залы</h2>
+      <p>Фото появятся здесь после первых мероприятий — пока показываем расположение.</p>
+    </div>
+
+    <div class="gal-tabs">
+      <button type="button" class="gal-tab active" data-hall="main">Основной зал</button>
+      <button type="button" class="gal-tab" data-hall="vip">ВИП-зал</button>
+    </div>
+
+    <div class="gal-slider">
+      <div class="gal-slides" data-hall="vip" hidden>
+        <div class="gal-slide active">
+          <div class="ph-tile">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="8.5" cy="10" r="1.5"/><path d="M21 15l-5-4-5 4-3-2-5 4"/></svg>
+          </div>
+          <div class="gal-cap">ВИП-зал — общий вид</div>
+        </div>
+        <div class="gal-slide">
+          <div class="ph-tile">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="8.5" cy="10" r="1.5"/><path d="M21 15l-5-4-5 4-3-2-5 4"/></svg>
+          </div>
+          <div class="gal-cap">ВИП-зал — сервировка стола</div>
+        </div>
+        <div class="gal-slide">
+          <div class="ph-tile">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="8.5" cy="10" r="1.5"/><path d="M21 15l-5-4-5 4-3-2-5 4"/></svg>
+          </div>
+          <div class="gal-cap">ВИП-зал — вечернее освещение</div>
+        </div>
+      </div>
+      <div class="gal-slides" data-hall="main">
+        <div class="gal-slide active">
+          <div class="ph-tile">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="8.5" cy="10" r="1.5"/><path d="M21 15l-5-4-5 4-3-2-5 4"/></svg>
+          </div>
+          <div class="gal-cap">Основной зал — общий вид</div>
+        </div>
+        <div class="gal-slide">
+          <div class="ph-tile">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="8.5" cy="10" r="1.5"/><path d="M21 15l-5-4-5 4-3-2-5 4"/></svg>
+          </div>
+          <div class="gal-cap">Основной зал — банкетная рассадка</div>
+        </div>
+        <div class="gal-slide">
+          <div class="ph-tile">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="8.5" cy="10" r="1.5"/><path d="M21 15l-5-4-5 4-3-2-5 4"/></svg>
+          </div>
+          <div class="gal-cap">Основной зал — большие окна</div>
+        </div>
+        <div class="gal-slide">
+          <div class="ph-tile">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="8.5" cy="10" r="1.5"/><path d="M21 15l-5-4-5 4-3-2-5 4"/></svg>
+          </div>
+          <div class="gal-cap">Основной зал — танцпол</div>
+        </div>
+      </div>
+
+      <button type="button" class="gal-arrow prev" aria-label="Предыдущее фото">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+      </button>
+      <button type="button" class="gal-arrow next" aria-label="Следующее фото">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+      </button>
+
+      <div class="gal-dots"></div>
+    </div>
+  </div>
+</section>
+
+<section class="section booking" id="booking">
+  <div class="wrap">
+    <div>
+      <div class="section-head">
+        <h2>Забронировать дату</h2>
+        <p>Оставьте заявку или позвоните — ответим и подберём зал под ваш праздник.</p>
+      </div>
+      <div class="booking-info">
+        <div class="row"><div class="label">Адрес</div><div class="val">г. Челябинск, ул. Курчатова, 28Б</div></div>
+        <div class="row"><div class="label">Телефон</div><div class="val"><!-- TODO: отдельный номер для коллтрекинга банкетного направления -->+7 (900) 000-00-00</div></div>
+        <div class="row"><div class="label">Время приёма заявок</div><div class="val">ежедневно, 10:00–18:00</div></div>
+      </div>
+      <p class="booking-info note">Количество гостей можно скорректировать позднее — дата останется за вами.</p>
+    </div>
+    <form>
+      <div class="field">
+        <label for="name">Как вас зовут</label>
+        <input id="name" type="text" placeholder="Имя">
+      </div>
+      <div class="field-row">
+        <div class="field">
+          <label for="phone">Телефон</label>
+          <input id="phone" type="tel" placeholder="+7 ___ ___-__-__" required>
+        </div>
+        <div class="field">
+          <label for="date">Дата мероприятия</label>
+          <input id="date" type="date">
+        </div>
+      </div>
+      <div class="field">
+        <label for="guests">Количество гостей</label>
+        <input id="guests" type="number" min="10" placeholder="10">
+      </div>
+      <div class="field">
+        <label for="msg">Комментарий <span style="font-weight:400;color:var(--ink-soft);">(по желанию)</span></label>
+        <textarea id="msg" rows="3" placeholder="Расскажите подробнее о мероприятии"></textarea>
+      </div>
+      <label class="consent">
+        <input type="checkbox" required>
+        <span>Согласен(на) на обработку персональных данных в соответствии с <a href="/privacy-policy.html">политикой конфиденциальности</a></span>
+      </label>
+      <button type="submit" class="btn btn-primary">Отправить заявку</button>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <a href="#" class="brand">
+        <img src="logo-icon-white.png" alt="Дружба" style="width:30px;height:30px;">
+        <span class="word">Дружба<small>банкетный зал</small></span>
+      </a>
+    </div>
+    <div class="foot-links">
+      <a href="#halls">Залы</a>
+      <a href="#menu">Меню</a>
+      <a href="#gallery">Галерея</a>
+      <a href="#booking">Контакты</a>
+      <a href="/privacy-policy.html">Политика конфиденциальности</a>
+    </div>
+  </div>
+  <div class="wrap foot-bottom">
+    <span>© 2026 Банкетный зал «Дружба». Курчатова, 28Б, Челябинск.</span>
+  </div>
+</footer>
+
+<a href="tel:+79000000000" class="fab-call" aria-label="Позвонить">
+  <svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.4 0 .8-.2 1L6.6 10.8z"/></svg>
+</a>
+
+<script>
+  // Калькулятор стоимости
+  (function(){
+    var tierSel = document.getElementById('calc-tier');
+    var guestsInp = document.getElementById('calc-guests');
+    var sumOut = document.getElementById('calc-sum');
+    function fmt(n){ return n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ') + ' ₽'; }
+    function recalc(){
+      var price = parseInt(tierSel.value, 10) || 0;
+      var guests = parseInt(guestsInp.value, 10);
+      if(!guests || guests < 1) guests = 0;
+      sumOut.textContent = fmt(price * guests);
+    }
+    if(tierSel && guestsInp && sumOut){
+      tierSel.addEventListener('input', recalc);
+      guestsInp.addEventListener('input', recalc);
+      recalc();
+    }
+  })();
+
+  // Галерея: выбор зала + слайдер
+  (function(){
+    var tabs = document.querySelectorAll('.gal-tab');
+    var panels = document.querySelectorAll('.gal-slides');
+    var dotsWrap = document.querySelector('.gal-dots');
+    var prevBtn = document.querySelector('.gal-arrow.prev');
+    var nextBtn = document.querySelector('.gal-arrow.next');
+    if(!tabs.length || !panels.length) return;
+
+    var active = 'main';
+    var index = 0;
+
+    function currentPanel(){
+      for(var i=0;i<panels.length;i++){ if(panels[i].dataset.hall === active) return panels[i]; }
+      return null;
+    }
+
+    function renderDots(){
+      var panel = currentPanel();
+      var slides = panel.querySelectorAll('.gal-slide');
+      dotsWrap.innerHTML = '';
+      slides.forEach(function(_, i){
+        var d = document.createElement('button');
+        d.type = 'button';
+        d.className = 'gal-dot' + (i === index ? ' active' : '');
+        d.setAttribute('aria-label', 'Фото ' + (i+1));
+        d.addEventListener('click', function(){ goTo(i); });
+        dotsWrap.appendChild(d);
+      });
+    }
+
+    function goTo(i){
+      var panel = currentPanel();
+      var slides = panel.querySelectorAll('.gal-slide');
+      index = (i + slides.length) % slides.length;
+      slides.forEach(function(s, idx){ s.classList.toggle('active', idx === index); });
+      renderDots();
+    }
+
+    function setHall(hall){
+      active = hall;
+      index = 0;
+      panels.forEach(function(p){ p.hidden = p.dataset.hall !== hall; });
+      tabs.forEach(function(t){ t.classList.toggle('active', t.dataset.hall === hall); });
+      var panel = currentPanel();
+      panel.querySelectorAll('.gal-slide').forEach(function(s, idx){ s.classList.toggle('active', idx === 0); });
+      renderDots();
+    }
+
+    tabs.forEach(function(t){
+      t.addEventListener('click', function(){ setHall(t.dataset.hall); });
+    });
+    prevBtn.addEventListener('click', function(){ goTo(index - 1); });
+    nextBtn.addEventListener('click', function(){ goTo(index + 1); });
+
+    setHall('main');
+  })();
+</script>
+
+</body>
+</html>
